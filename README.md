@@ -26,7 +26,7 @@ and will die if you don't catch enough fish to last him for the day
 ![Mechanics](https://3.bp.blogspot.com/-sKNxeiXAvoA/XNSLPqd3v0I/AAAAAAAASVs/R3QJqP8a_ronZDiiunZb8YOqQR3teitGQCLcBGAs/s1600/ice%2Bfishing%2Bguide3.png)
 
 ## Gameplay Flowchart
-![Flowchart](originalassets/Ice_Angler_Flowchart.png)
+![Flowchart](https://www.davidnichol.me/Images/Angler/Ice%20Angler%20Flowchart.png)
 
 Platform: Windows, Mac, Linux, WebGL
 
