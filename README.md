@@ -1,4 +1,4 @@
-# GameProgramming2 Final
+# Ice Angler
  Game Programming 2 Final Template
 
 Game Name:  Ice Angler
