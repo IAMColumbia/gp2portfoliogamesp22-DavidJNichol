@@ -39,3 +39,12 @@ Folder Sturcture
 \build\0.1POC
 \build\0.2VS
 \build\0.3Final
+
+## Developer Log
+empty for now. 
+
+## Branches and Tags 
+- Main
+- POC
+- VS
+- Final
