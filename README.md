@@ -16,7 +16,7 @@ Genre: 2D fishing game
 ![Mechanics](https://3.bp.blogspot.com/-sKNxeiXAvoA/XNSLPqd3v0I/AAAAAAAASVs/R3QJqP8a_ronZDiiunZb8YOqQR3teitGQCLcBGAs/s1600/ice%2Bfishing%2Bguide3.png)
 
 ## Gameplay Flowchart
-![Flowchart](originalassets/Ice Angler Flowchart.png)
+![Flowchart](originalassets/Ice_Angler_Flowchart.png)
 
 Platform: Windows, Mac, Linux, WebGL
 
