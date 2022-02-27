@@ -15,7 +15,7 @@ Genre: 2D fishing game
 ## Core Mechanics
 ![Mechanics](https://3.bp.blogspot.com/-sKNxeiXAvoA/XNSLPqd3v0I/AAAAAAAASVs/R3QJqP8a_ronZDiiunZb8YOqQR3teitGQCLcBGAs/s1600/ice%2Bfishing%2Bguide3.png)
 
-Platform:
+Platform: Windows, Mac, Linux, WebGL
 
 Folder Sturcture
 
