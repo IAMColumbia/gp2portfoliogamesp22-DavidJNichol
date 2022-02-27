@@ -1,1 +1,32 @@
-Add Propsal bit here
+# GameProgramming2 Final
+ Game Programming 2 Final Template
+
+Game Name:  Ice Angler
+
+Description Short: 2D ice fishing game based on the ice fishing minigame from Club Pengiun
+
+Description Long: Catch as many fish as you can before you starve. Because of the nearby power plant, toxic waste that has been leaking into the water is mutating fish! As you progress, the fish become more mutated and more difficult to catch.
+
+Genre: 2D fishing game
+
+## Sample Art
+![Art](https://i.ytimg.com/vi/HNrExk4167c/maxresdefault.jpg)
+
+## Core Mechanics
+![Mechanics](https://3.bp.blogspot.com/-sKNxeiXAvoA/XNSLPqd3v0I/AAAAAAAASVs/R3QJqP8a_ronZDiiunZb8YOqQR3teitGQCLcBGAs/s1600/ice%2Bfishing%2Bguide3.png)
+
+## Gameplay Flowchart
+![Flowchart](originalassets/Ice_Angler_Flowchart.png)
+<mxfile host="app.diagrams.net" modified="2022-02-27T00:49:57.353Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="cHOmCyXI_4SMyM3Hf_Fd" version="16.5.5" type="device"><diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">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</diagram></mxfile>
+
+Platform: Windows, Mac, Linux, WebGL
+
+Folder Sturcture
+\src
+\src\packages
+\assets
+\docs
+\build
+\build\0.1POC
+\build\0.2VS
+\build\0.3Final
