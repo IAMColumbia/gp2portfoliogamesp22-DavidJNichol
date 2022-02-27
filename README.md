@@ -15,22 +15,17 @@ Genre: 2D fishing game
 ## Core Mechanics
 ![Mechanics](https://3.bp.blogspot.com/-sKNxeiXAvoA/XNSLPqd3v0I/AAAAAAAASVs/R3QJqP8a_ronZDiiunZb8YOqQR3teitGQCLcBGAs/s1600/ice%2Bfishing%2Bguide3.png)
 
+## Gameplay Flowchart
+![Flowchart](https://ibb.co/ZLjQx3B)
+
 Platform: Windows, Mac, Linux, WebGL
 
 Folder Sturcture
-
 \src
-
 \src\packages
-
 \assets
-
 \docs
-
 \build
-
 \build\0.1POC
-
 \build\0.2VS
-
 \build\0.3Final
