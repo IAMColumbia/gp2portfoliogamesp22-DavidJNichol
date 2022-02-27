@@ -9,6 +9,16 @@ Description Long: Catch as many fish as you can before you starve. Because of th
 
 Genre: 2D fishing game
 
+summary brief of game mechanic
+using the mouse and keyboard, try and lure fish onto your line but don't let passing objects 
+and other creatures unhook your fish. Catch as many fish as you can to survive
+
+certain fish will require quick time events
+
+motivation why try to win
+the player (a polar bear) is getting hungry 
+and will die if you don't catch enough fish to last him for the day
+
 ## Sample Art
 ![Art](https://i.ytimg.com/vi/HNrExk4167c/maxresdefault.jpg)
 
