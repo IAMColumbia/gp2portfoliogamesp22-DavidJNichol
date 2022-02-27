@@ -9,7 +9,7 @@ Description Long: Catch as many fish as you can before you starve. Because of th
 
 Genre: 2D fishing game
 
-##Sample Mechanics
+## Sample Mechanics
 ![Mechanics](https://3.bp.blogspot.com/-sKNxeiXAvoA/XNSLPqd3v0I/AAAAAAAASVs/R3QJqP8a_ronZDiiunZb8YOqQR3teitGQCLcBGAs/s1600/ice%2Bfishing%2Bguide3.png)
 
 Platform:
