@@ -1,1 +1,24 @@
 Release Notes version 2 Vertical Slice
+
+This edition, the first order of importance was changing the way the hook and line moved with mouse input.
+I changed it from a system of having the hook follow the mouse, to apply a movement with a speed to the hook
+based on whether the mouse was going up or down. This was important because now the hook doesn't go slower/faster
+based on screen size, the only mouse input info it needs is up or down.
+
+There was a problem I encountered after this where I had to choose to put a rigidbody on the hook and move it on 
+FixedUpdate(), or put it on all the fish and have them move on FixedUpdate(). I chose to put the hook on FixedUpdate
+not only since it would be more performant, but because it felt a lot more clunky with the fish moving with a jitter.
+The hook moves fast enough to the point where it's hard to notice.
+
+I decided I should just get all the art out of the way with one big swoop, and so I spent some time making all the pixel assets
+this week. 
+
+I added a basic shop with a few upgrades that you can hover and see information about. I plan on using the decorator pattern
+once I add functionality to those items. 
+
+I added a goal and a timer to each round to add some challenge. When the timer is up, the player is judged whether or not they
+meet the criteria for number of fish caught. If not, they lose. I haven't implemeneted the lose state yet however.
+
+I added a new fish, Nemo and a new obstacle, the Can. 
+
+I started a WaveManager and Wave system so that difficulty can increase and or be randomized per wave, this has yet to be finished.
