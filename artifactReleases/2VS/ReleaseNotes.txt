@@ -22,3 +22,7 @@ meet the criteria for number of fish caught. If not, they lose. I haven't implem
 I added a new fish, Nemo and a new obstacle, the Can. 
 
 I started a WaveManager and Wave system so that difficulty can increase and or be randomized per wave, this has yet to be finished.
+
+I decided to use a wavemanager who has a list of waves, where waves are a wrapper for modifying the spawned elements to change difficulty,
+randomness and funness. The wave has methods like SetSpeed(MarineObject obj, float speed), where you can change the spawned objects of that
+wave to your liking.
