@@ -8,5 +8,6 @@ public class Can : Obstacle
     {
         base.Start();
         moveSpeed = 1.3f;
+        spawnProbability = .5f;
     }
 }

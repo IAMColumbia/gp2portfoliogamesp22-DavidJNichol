@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wave : MonoBehaviour, IWave
+public class Wave : IWave
 {
     public int NumObjectsToSpawn { get { return numObjectsToSpawn; } set { numObjectsToSpawn = value; } }
     private int numObjectsToSpawn;
     public int GoalAmount { get { return goalAmount; } set { goalAmount = value; } }
-    private int goalAmount;
+    private int goalAmount = 10;
+
     public void SetMarineObjectChanceOfSpawn(MarineObject obj, float probability)
     {
         obj.SpawnProbability = probability;

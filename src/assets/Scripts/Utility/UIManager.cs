@@ -23,10 +23,8 @@ public class UIManager : MonoBehaviour
         Player.SharedInstance.OnMeterLoss += UpdateMeterLoss;
         Player.SharedInstance.OnMeterGain += UpdateMeterGain;
         Player.SharedInstance.OnMeterReset += ResetMeter;
-
+        WaveManager.SharedInstance.OnWaveStart += UpdateGoalAmount;
         WaveManager.SharedInstance.OnWaveEnd += ShowEndScreen;
-        WaveManager.SharedInstance.StartNewWave();
-        goalAmount.text = WaveManager.SharedInstance.CurrentWave.GoalAmount.ToString();
     }
 
     private void Update()
@@ -38,6 +36,11 @@ public class UIManager : MonoBehaviour
     private void UpdateScore(int score)
     {
         scoreText.text = score.ToString();
+    }
+
+    private void UpdateGoalAmount(int amount)
+    {
+        goalAmount.text = amount.ToString();
     }
 
     private void UpdateMeterLoss(float lossAmount)

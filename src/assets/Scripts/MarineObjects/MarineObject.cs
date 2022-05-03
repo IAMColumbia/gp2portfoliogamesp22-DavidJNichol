@@ -30,6 +30,7 @@ public class MarineObject : MonoBehaviour, IMarineObject
     protected virtual void Start()
     {
         moveSpeed = 0;
+        SpawnProbability = .5f;
         canMove = true;
         canCollideWithHook = true;
         rb = GetComponent<Rigidbody2D>();

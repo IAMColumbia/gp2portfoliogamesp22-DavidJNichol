@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Obstacle : MarineObject, IObstacle
 {
+    protected override void Start()
+    {
+        base.Start();
+    }
+
     protected override void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.GetComponent<MarineObject>()) // if it's a marine object

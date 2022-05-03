@@ -18,8 +18,9 @@ public class Spawner : MonoBehaviour, ISpawner
 
         InitializeSpawnOffsetList();
 
-        for(int i = 0; i < ObjectPool.SharedInstance.objectsToPool.Count; i++)
-            SpawnRandomMarineObject();
+        SpawnNewWave();
+
+        WaveManager.SharedInstance.OnWaveEnd += SpawnNewWave;
     }
 
     private void RespawnObjectsIfDeactivated()
@@ -39,7 +40,7 @@ public class Spawner : MonoBehaviour, ISpawner
     {
         // create temp marine obj and assign to OP singleton get pooled object
         MarineObject marineObject = ObjectPool.SharedInstance.GetPooledObject();
-
+            
         if (marineObject != null)
         { 
             objectsInScene.Add(marineObject);
@@ -67,6 +68,10 @@ public class Spawner : MonoBehaviour, ISpawner
 
             spawnYCoordinates.RemoveAt(randIndex);
         }
+        else
+        {
+            SpawnRandomMarineObject();
+        }
     }
 
     private void AdjustSpawnOffset(float amount)
@@ -88,5 +93,11 @@ public class Spawner : MonoBehaviour, ISpawner
         spawnYCoordinates.Add(-60);
         spawnYCoordinates.Add(-90);
         spawnYCoordinates.Add(-110);
+    }
+
+    private void SpawnNewWave()
+    {
+        for (int i = 0; i < ObjectPool.SharedInstance.objectsToPool.Count; i++) // set privately on wave start by wavemanager
+            SpawnRandomMarineObject();
     }
 }

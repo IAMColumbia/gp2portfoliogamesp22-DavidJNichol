@@ -275,9 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7936ec754d88c1e46ad961e1157b6a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharkCopy: {fileID: 2006220570}
   roundTime: 30
   timer: {fileID: 0}
-  waveList: []
 --- !u!114 &86830375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,7 +1429,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1a90c32648636e14eae11d4d7dc0fe42, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.226
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4644,6 +4644,7 @@ MonoBehaviour:
   - {fileID: 496372530}
   - {fileID: 1453366544}
   - {fileID: 2006220570}
+  pooledObjects: []
   minimumAmountOfObjects: 5
 --- !u!1 &1216232979
 GameObject:
@@ -6271,7 +6272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1939062904
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6284,7 +6285,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 31af0045690f2894893b074494587f68, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.291
+  m_Volume: 0.239
   m_Pitch: 1
   Loop: 1
   Mute: 0

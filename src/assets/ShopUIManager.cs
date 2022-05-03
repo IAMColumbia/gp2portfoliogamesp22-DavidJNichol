@@ -24,7 +24,6 @@ public class ShopUIManager : MonoBehaviour
             Items.Add(items.transform.GetChild(i).gameObject.GetComponent<ShopItem>());
             Items[i].OnItemBought += UpdateCurrency;
         }
-
     }
     void OnEnable()
     {
@@ -37,7 +36,6 @@ public class ShopUIManager : MonoBehaviour
         endScreen.SetActive(false);
         gameCamera.enabled = true;
         shopCamera.enabled = false;
-        WaveManager.SharedInstance.StartNewWave();
 
         if (Cursor.visible)
         {

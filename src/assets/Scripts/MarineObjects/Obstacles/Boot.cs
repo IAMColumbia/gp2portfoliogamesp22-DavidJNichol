@@ -8,5 +8,6 @@ public class Boot : Obstacle
     {
         base.Start();
         moveSpeed = .8f;
+        spawnProbability = .5f;
     }
 }

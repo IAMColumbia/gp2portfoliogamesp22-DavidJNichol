@@ -9,9 +9,9 @@ public class ObjectPool : MonoBehaviour
 
     public List<MarineObject> objectsToPool;
 
-    private List<MarineObject> pooledObjects;
+    public List<MarineObject> pooledObjects;
 
-    [SerializeField] private int minimumAmountOfObjects;
+    [HideInInspector] public int minimumAmountOfObjects;
 
     private void Awake()
     {
@@ -31,17 +31,19 @@ public class ObjectPool : MonoBehaviour
 
         InstantiateMarineObjectsForScene();
 
-        if (sharedInstance.minimumAmountOfObjects == 0)
-            sharedInstance.minimumAmountOfObjects = 1;
+        sharedInstance.minimumAmountOfObjects = sharedInstance.pooledObjects.Count;
     }
 
     public MarineObject GetPooledObject()
     {
+
         for (int i = 0; i < sharedInstance.minimumAmountOfObjects; i++)
         {
-            if(!sharedInstance.pooledObjects[i].gameObject.activeInHierarchy)
+            int randNum = Random.Range(0, sharedInstance.pooledObjects.Count);
+            if (!sharedInstance.pooledObjects[randNum].gameObject.activeInHierarchy)
             {
-                return sharedInstance.pooledObjects[i];
+                if (Random.value <= sharedInstance.pooledObjects[randNum].SpawnProbability)
+                    return sharedInstance.pooledObjects[randNum];
             }
         }
         return null;

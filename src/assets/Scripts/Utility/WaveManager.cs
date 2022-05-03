@@ -9,12 +9,14 @@ public class WaveManager : MonoBehaviour
     public Wave CurrentWave { get { return currentWave; } set { currentWave = value; } }
     private Wave currentWave;
 
+    [SerializeField] private Shark sharkCopy;
+
     [SerializeField] private float roundTime;
 
     public delegate void OnWaveEndHandler();
     public event OnWaveEndHandler OnWaveEnd;
 
-    public delegate void OnWaveStartHandler();
+    public delegate void OnWaveStartHandler(int goalAmount);
     public event OnWaveStartHandler OnWaveStart;
 
     [HideInInspector]
@@ -23,7 +25,7 @@ public class WaveManager : MonoBehaviour
     [HideInInspector]
     public List<Wave> waveList;
 
-    private int round;
+    private int roundNum;
 
     private void Awake()
     {
@@ -42,6 +44,12 @@ public class WaveManager : MonoBehaviour
     {
         sharedInstance.waveList = new List<Wave>();
         sharedInstance.timer = GetComponent<Timer>();
+        sharedInstance.roundTime = roundTime;
+
+        SetNewWaveParams();
+
+        Wave NewWave = new Wave();
+        sharedInstance.currentWave = NewWave;
     }
 
     private void Update()
@@ -52,35 +60,55 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-    public void StartNewWave()
+    public void SetNewWaveParams()
     {
-        sharedInstance.round++;
-        Wave newWave = new Wave();
-        
-        if(round == 1)
+        sharedInstance.roundNum++;
+        Wave NewWave = new Wave();
+
+        if (roundNum == 1)
         {
-            newWave.NumObjectsToSpawn = 3;
-            newWave.GoalAmount = 10;
+            NewWave.GoalAmount = 10;
+
+            for(int i = 0; i < ObjectPool.SharedInstance.pooledObjects.Count; i++) //wave one all objs have 50% chance
+            {
+                ObjectPool.SharedInstance.pooledObjects[i].SpawnProbability = .5f;
+            }
         }
-        else if (round == 2)
+        else if (roundNum == 2)
         {
-            newWave.NumObjectsToSpawn = 4;
+            NewWave.GoalAmount = 12;
+
+            Shark extraShark = Instantiate(sharkCopy, sharkCopy.transform.parent.transform);
+            extraShark.gameObject.SetActive(false);
+
+            ObjectPool.SharedInstance.objectsToPool.Add(extraShark);
+            ObjectPool.SharedInstance.pooledObjects.Add(extraShark);
+            ObjectPool.SharedInstance.minimumAmountOfObjects = ObjectPool.SharedInstance.objectsToPool.Count;
+
+            NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[0], .5f); //boot 
+            NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[1], .5f); //eel
+            NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[2], .5f); //nemo
+            NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[3], .5f); //can
+            NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[4], .5f); //shark
+            NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[5], .5f); //shark
+
         }
-        else if (round == 3)
+        else if (roundNum == 3)
         {
-            newWave.NumObjectsToSpawn = 4;
+            sharedInstance.currentWave.NumObjectsToSpawn = 4;
         }
-        else if (round == 4)
+        else if (roundNum == 4)
         {
-            newWave.NumObjectsToSpawn = 4;
+            sharedInstance.currentWave.NumObjectsToSpawn = 4;
         }
-        else if (round == 5)
+        else if (roundNum == 5)
         {
-            newWave.NumObjectsToSpawn = 5;
+            sharedInstance.currentWave.NumObjectsToSpawn = 5;
         }
 
-        sharedInstance.currentWave = newWave;
-        sharedInstance.timer.SetTimerDuration(roundTime);
+        sharedInstance.currentWave = NewWave;
+        sharedInstance.OnWaveStart(sharedInstance.currentWave.GoalAmount);
+        sharedInstance.timer.SetTimerDuration(sharedInstance.roundTime);
         sharedInstance.timer.StartTimer();
     }
 

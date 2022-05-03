@@ -1,1 +1,18 @@
 Release Notes version 3 Final
+
+This build I added:
+Upgrade, modded reel, titanum hook, time pebble classes
+support for wave difficulty including spawn probability per marine object
+
+This sprint I really didn't do a whole lot, since I've been sick and capstone has been kicking my butt. 
+I got really caught up on the spawn probabilities since that's a big part of the game, but it also turned out to be one of the most 
+difficult. 
+
+I realised using 3 public static singletons was not a good idea. Many times classes would now depend on execution order
+as I would set variables of the singletons in a start method, then another start method would throw null because it came 
+before that in order. Not good.
+
+then I have the problem of crashing whenever the game is over due to stack overflow. I ran out of time basically by the time 
+I got that error.
+
+Lot's more to do!
