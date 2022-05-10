@@ -10,5 +10,6 @@ public class Eel : Fish
         base.Start();
         moveSpeed = .85f;
         durability = 6;
+        spawnProbability = .35f;
     }
 }

@@ -5,32 +5,63 @@ using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject hook;
+    private Rigidbody2D hookRB;
+    private Camera mainCamera;
 
-    [SerializeField] private Camera mainCamera;
-
-    private float lastY;
     private float mouseY;
+    private float lastY;
+
+    private float bottomBoundY;
+    private float topBoundY;
+
+    private float speed;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         Cursor.lockState = CursorLockMode.Confined;
-        //Cursor.visible = false;
-    }
-    private void Update()
-    {
-        mouseY = mainCamera.ScreenToWorldPoint(Input.mousePosition).y*2;
+        Cursor.visible = false;
+        mainCamera = Camera.main;
+        hookRB = transform.GetChild(1).GetComponent<Rigidbody2D>();
+
+        speed = 4;
+        bottomBoundY = -295;
+        topBoundY = -64;
     }
     private void FixedUpdate()
     {
-        if (mouseY != lastY)
+        mouseY = mainCamera.ScreenToWorldPoint(Input.mousePosition).y;
+
+        if (hookRB.position.y - mouseY > 6)
         {
-            this.transform.localPosition = new Vector3(transform.localPosition.x, mouseY, transform.localPosition.z);
-            lastY = this.transform.localPosition.y;
+            MoveDown();
         }
-        //gradual
-        //this.transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + mouseY, transform.localPosition.z);
+        else if (hookRB.transform.position.y - mouseY < -6)
+        {
+            MoveUp();
+        }
+
+        lastY = mouseY;
+
+        KeepInBounds();
+    }
+
+    private void MoveUp()
+    {
+        this.transform.localPosition = new Vector3(this.transform.localPosition.x, this.transform.localPosition.y + speed, this.transform.localPosition.z);
+    }
+
+    private void MoveDown()
+    {
+        this.transform.localPosition = new Vector3(this.transform.localPosition.x, this.transform.localPosition.y - speed, this.transform.localPosition.z);
+    }
+
+    private void KeepInBounds()
+    {
+        if (this.transform.localPosition.y < bottomBoundY)
+            this.transform.localPosition = new Vector3(transform.localPosition.x, bottomBoundY, transform.localPosition.z);
+        else if (this.transform.localPosition.y > topBoundY)
+            this.transform.localPosition = new Vector3(transform.localPosition.x, topBoundY, transform.localPosition.z);
     }
 }

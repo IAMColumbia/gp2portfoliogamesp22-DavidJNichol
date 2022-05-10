@@ -42,6 +42,7 @@ public class Timer : MonoBehaviour, ITimer
         else
         {
             timeRemaining = 0;
+            StopTimer();
         }
     }
 }

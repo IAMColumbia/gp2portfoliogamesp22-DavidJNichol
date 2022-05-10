@@ -8,20 +8,6 @@ public class Boot : Obstacle
     {
         base.Start();
         moveSpeed = .8f;
-    }
-
-    protected override void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.GetComponent<MarineObject>()) // if it's a marine object
-        {
-            if (Player.SharedInstance)
-            {
-                Player.SharedInstance.LoseFish(); 
-            }
-        }
-        if (col.name == "RightBound")
-        {
-            Deactivate(); // spawn new delegate fire
-        }
+        spawnProbability = .5f;
     }
 }

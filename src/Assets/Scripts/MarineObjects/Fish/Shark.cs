@@ -10,5 +10,6 @@ public class Shark : Fish
         base.Start();
         moveSpeed = 1;
         durability = 10;
+        spawnProbability = .2f;
     }
 }
