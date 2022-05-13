@@ -24,7 +24,7 @@ public class WaveManager : MonoBehaviour
     [HideInInspector]
     public Timer timer;
 
-    private bool isRoundActive;
+    [HideInInspector] public bool isRoundActive;
 
     [HideInInspector]
     public List<Wave> waveList;
@@ -78,48 +78,30 @@ public class WaveManager : MonoBehaviour
     {
         sharedInstance.roundNum++;
         Wave NewWave = new Wave();
-
-       
+   
         if (roundNum == 1)
         {
             NewWave.GoalAmount = 6;
-
-            //for(int i = 0; i < ObjectPool.SharedInstance.pooledObjects.Count; i++) //wave one all objs have 50% chance
-            //{
-            //    ObjectPool.SharedInstance.pooledObjects[i].SpawnProbability = .5f;
-            //}
         }
         else if (roundNum == 2)
         {
-            NewWave.GoalAmount = 10;
-            //NewWave.GoalAmount = 12;
-
-            //Shark extraShark = Instantiate(sharkCopy, sharkCopy.transform.parent.transform);
-            //extraShark.gameObject.SetActive(false);
-
-            //ObjectPool.SharedInstance.objectsToPool.Add(extraShark);
-            //ObjectPool.SharedInstance.pooledObjects.Add(extraShark);
-            //ObjectPool.SharedInstance.minimumAmountOfObjects = ObjectPool.SharedInstance.objectsToPool.Count;
-
-            //NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[0], .5f); //boot 
-            //NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[1], .5f); //eel
-            //NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[2], .5f); //nemo
-            //NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[3], .5f); //can
-            //NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[4], .5f); //shark
-            //NewWave.SetMarineObjectChanceOfSpawn(ObjectPool.SharedInstance.objectsToPool[5], .5f); //shark
-
+            NewWave.GoalAmount = 8;
         }
         else if (roundNum == 3)
         {
-            sharedInstance.currentWave.NumObjectsToSpawn = 4;
+            NewWave.GoalAmount = 10;
         }
         else if (roundNum == 4)
         {
-            sharedInstance.currentWave.NumObjectsToSpawn = 4;
+            NewWave.GoalAmount = 12;
         }
         else if (roundNum == 5)
         {
-            sharedInstance.currentWave.NumObjectsToSpawn = 5;
+            NewWave.GoalAmount = 14;
+        }
+        else
+        {
+            NewWave.GoalAmount = 6;
         }
 
         sharedInstance.currentWave = NewWave;
@@ -141,7 +123,6 @@ public class WaveManager : MonoBehaviour
             roundSuccess = false;
 
         sharedInstance.OnWaveEnd(roundSuccess);
-        Time.timeScale = 0; // stop time
         hook.GetComponent<Collider2D>().enabled = false;
     }
     

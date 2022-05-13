@@ -14,7 +14,7 @@ public class MouseMovement : MonoBehaviour
     private float bottomBoundY;
     private float topBoundY;
 
-    private float speed;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -31,20 +31,23 @@ public class MouseMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        mouseY = mainCamera.ScreenToWorldPoint(Input.mousePosition).y;
-
-        if (hookRB.position.y - mouseY > 6)
+        if(WaveManager.SharedInstance.isRoundActive)
         {
-            MoveDown();
-        }
-        else if (hookRB.transform.position.y - mouseY < -6)
-        {
-            MoveUp();
-        }
+            mouseY = mainCamera.ScreenToWorldPoint(Input.mousePosition).y;
 
-        lastY = mouseY;
+            if (hookRB.position.y - mouseY > 6)
+            {
+                MoveDown();
+            }
+            else if (hookRB.transform.position.y - mouseY < -6)
+            {
+                MoveUp();
+            }
 
-        KeepInBounds();
+            lastY = mouseY;
+
+            KeepInBounds();
+        }
     }
 
     private void MoveUp()

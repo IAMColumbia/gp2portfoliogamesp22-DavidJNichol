@@ -16,7 +16,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text CaughtAmount;
     [SerializeField] private Camera shopCamera;
     [SerializeField] private GameObject lossMessage;
-    public GameObject jeff;
 
     public bool isTimerRunning;
 
@@ -86,8 +85,6 @@ public class UIManager : MonoBehaviour
         else
             lossMessage.SetActive(false);
 
-        jeff.SetActive(true);
-
         CaughtAmount.text = Player.SharedInstance.Score.ToString();
         endScreen.gameObject.SetActive(true);
 
@@ -104,7 +101,6 @@ public class UIManager : MonoBehaviour
         {
             transform.parent.gameObject.SetActive(false); // turn off game
             endScreen.gameObject.SetActive(false);
-            Time.timeScale = 1;
             shop.SetActive(true);
             shopCamera.enabled = true;
             Camera.main.enabled = false;

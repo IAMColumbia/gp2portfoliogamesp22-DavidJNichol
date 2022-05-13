@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WaveManager" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQJAIAAADCCAAAQACAAAAAAAAAAIAAZAAAAAAAQAMg=</HashCode>
+      <FileName>Assets\Scripts\Utility\WaveManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wave" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAACAAAAAgAAgQAAAAAAAAAAABAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\Wave.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAACAhgSAAACAIIAAgEAAAAoAAhAAAAIgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAEAAAAAAAAAAEIAAABAAAAAAAAQwAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\Timer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StartUIManager" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\StartUIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spawner" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQCAggBBBAAAAAAAACAAAAAABIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\Spawner.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ShopUIManager" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAACAAAAAiIAAAAAAAECgAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\ShopUIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectPool" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACAAAADAAAAAQAAAgAAAIAAQAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Utility\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MarineObject" Collapsed="true">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAACSEEOBghBAEEIAAAAAgAEAAAAQAAAAAAAAACFA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\MarineObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Obstacle" Collapsed="true">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Obstacles\Obstacle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Can" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Obstacles\Can.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boot" Collapsed="true">
+    <Position X="11.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Obstacles\Boot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shark" Collapsed="true">
+    <Position X="8" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Fish\Shark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemo" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Fish\Nemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fish" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABCAAAAAAACAAAAAAAAAAAAAAEAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Fish\Fish.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Eel" Collapsed="true">
+    <Position X="12.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Fish\Eel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchParticleSystem" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Gameplay\CatchParticleSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseMovement" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEAAAAAAiAkAAAAAAAAAEAAAAAQEQAARAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Gameplay\MouseMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIBAAADAEAAgQCQZIAICiACABQAQAEAAAABAAAEI=</HashCode>
+      <FileName>Assets\Scripts\Gameplay\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShopItem" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAAAAAgAQAAAAAEAAQAQAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Gameplay\ShopItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bound" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bounds\Bound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IWave" Collapsed="true">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAgQAAAAAAAAAAABAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\IWave.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITimer" Collapsed="true">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utility\ITimer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISpawner" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Interfaces\ISpawner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IObstacle" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Interfaces\IObstacle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IMarineObject" Collapsed="true">
+    <Position X="16" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAEAIBAgBAAAAAAAAAAAAAAAAAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Interfaces\IMarineObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ICatchable" Collapsed="true">
+    <Position X="14.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MarineObjects\Interfaces\ICatchable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IUpgrade" Collapsed="true">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Gameplay\IUpgrade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

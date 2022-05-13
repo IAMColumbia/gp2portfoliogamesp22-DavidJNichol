@@ -1,0 +1,45 @@
+What patterns did you implement in your game. How did the help manage the structure of your game classes and their dependencies.
+
+I implemented the singleton pattern (which I hate now) and the object pool pattern (which I love)
+If I had more time for upgrades I would have implemented the decorator pattern,
+and I wish I would have used the observer pattern instead of delegates.
+
+The singleton pattern helped a bit because it allowed me to not have to requrire certain classes that 
+shouldn't have a Player have a player, but in reality, everybody knowing about the player isn't a great
+idea when the player class became as big as it was.
+
+Object pooling was great for performance of respawning fish but the unity tutorial way made it so that you had
+to use a singleton object pool class which I wouldn't have done if I knew any better. Oh well, I learned.
+
+What challenges did you have making your game components? What techniques did you use to overcome these challenges.
+
+I had a lot of challenges. The first was the challenge of moving the hook with the mouse. I guess I overthought it too much
+because I never got the version that you reccommended to me (translating it up or down based on the change in mouse position) 
+rather than tying the pos of the line to mouse pos. It worked pretty well however it was definitely jittery if I moved it with
+rigidbody physics, so I ended up making all the fish physics actors instead of the hook and line. This was a performance tradeoff 
+for game feel, because it was definitely unsatisfying having a jittery slow moving hook. I had another issue with a stack overflow that
+was an easy fix, and an issue with rounds not working because the fish wouldn't hit the collider and respawn. The fix for that was actually
+just to not manipulate time.timescale. For some reason I can't figure out why the fish still move when time.timescale is 0 but it turns out 
+the colliders don't work with time.timescale set to 0. 
+
+Rate how reusable the game codebase is? What percentage is specific to the game? What percentage is specific to the platform (monogame/unity)?
+
+I would say the game is 35% unity 65% C#. A lot of the classes as karen pointed out were monobehavior when they didn't necessarily need to be.
+For example, I made a timer class that was a monobehavior so that you could call timer.Start() in the external class instead of it needing
+to tick the timer itself. I didn't need to do it this way though, and if I needed to make the code more reusable I would make the timer 
+not a monobehavior. Some of the stuff is Unity only based (UI for start menu, game end screen and shop). The shop specifically is 100% unity almost,
+because it's just the UI. However, much of the actual game loop is not unity bound besides monobehavior. That being said, I did add a particle effect
+recently for when fish are caught, and that added to the total for unity %. 
+
+How maintainable is your code? Is it easy to add more enemies, pickups, weapons, levels etc?
+
+I would say as far as marine objects go it's very simple to add more, and have them do whatever
+they need to do. The marine object hierarchy is one of the things I'm most proud of with this 
+project. I would give myself a 7/10 for maintainability though because towards the end everything got really messy with delegates and singletons and 
+I crunched pretty hard due to procrastination and that gave myself a lot of tech debt. 
+
+Did you finish your game? Is there any outstanding technical debt?
+
+I would say the game isn't finished. The game loop is there, but it's not really fun. Also, I have a shop UI where you can purchase items
+but there is no way to use those items, which is sad. If capstone, work and applying for jobs didn't kick my butt so bad I would have had enough time to
+polish the game enough. At least it's not broken. I hope.

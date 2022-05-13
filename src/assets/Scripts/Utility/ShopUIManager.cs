@@ -34,7 +34,6 @@ public class ShopUIManager : MonoBehaviour
         transform.parent.gameObject.SetActive(false); // deactivate shop
         game.SetActive(true);
         endScreen.SetActive(false);
-        endScreen.transform.parent.transform.parent.GetComponent<UIManager>().jeff.SetActive(false);
         gameCamera.enabled = true;
         shopCamera.enabled = false;
 
